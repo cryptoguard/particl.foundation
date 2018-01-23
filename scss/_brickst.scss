@@ -1,0 +1,199 @@
+/*! BRICKst v1.0.0 | MIT License | allienworks.net */
+
+// ------ GENERAL ------ //
+
+* { box-sizing: border-box; }
+html { font-size: 16px; line-height: $line-height; }
+body { font-family: $font; cursor: default; }
+a {
+  text-decoration: none; color: $color;
+  &:hover { color: darken($color, 10%); }
+  &:focus { outline: none; }
+}
+
+h1, h2, h3, h4, h5 {
+  font-feature-settings: "dlig", "liga", "kern"; // for beautiful typography & ligatures
+}
+
+
+// ------ FORMS ------ //
+
+input,
+textarea,
+select {
+  width: 100%; margin-bottom: 0.7rem;
+  &[type="checkbox"],
+  &[type="radio"] { width: auto; }
+}
+label { cursor: pointer; }
+
+
+
+// ------ MEDIA ------ //
+
+img { max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; }
+iframe { display: block; max-width: 100%; }
+
+.video-container { // for widescreen embeded videos (Youtube)
+  width: 100%; height: 0; overflow: hidden;
+  padding-bottom: 56.23%; margin: 3rem 0 4rem;
+  position: relative;
+  iframe, object, embed, video {
+    width: 100%; height: 100%;
+    position: absolute; top: 0;
+  }
+}
+
+
+// ------ HELPER CLASSES ------ //
+
+// Visibility
+.hide { display: none; }
+.hide-for-small {
+  display: none !important;
+  @include break(m) { display: inherit !important; }
+}
+.hide-for-medium {
+  @include break(m) { display: none !important; }
+  @include break(l) { display: inherit !important; }
+}
+.hide-for-large {
+  @include break(l) { display: none !important; }
+}
+.show-for-small {
+  @include break(m) { display: none !important; }
+}
+.show-for-medium {
+  display: none !important;
+  @include break(m) { display: inherit !important; }
+  @include break(l) { display: none; }
+}
+.show-for-large {
+  display: none;
+  @include break(l) { display: inherit !important; }
+}
+
+
+// Text align
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+// Effects
+.tfx, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
+.zoom { -webkit-transform: scale(1.1); transform: scale(1.1); }
+
+// Clearfix
+.clearfix, %clearfix {
+  &::before, &::after { content: ""; display: table; }
+  &::after { clear: both; }
+}
+
+
+.show-grid { // inspired by https://sassline.com
+  background-image: linear-gradient(to bottom, #0ff 0px, rgba(255, 255, 255, 0) 1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1rem;
+}
+
+
+// ------ UI ELEMENTS ------ //
+
+.button, button {
+  font-weight: bold; text-decoration: none; color: $color-white;
+  display: inline-block; padding: 0.7rem 1.2rem;
+  background: $color; border-radius: $border-radius; border: none;
+  @extend .tfx;
+  &:hover { background: darken($color, 7%); color: $color-white; }
+  &.toggled { background: darken($color, 10%); box-shadow: 0 3px darken($color, 24%) inset; }
+
+  // Button Sizes
+  &.tiny { padding: 0.3rem 0.7rem; font-size: 0.65rem; }
+  &.small { padding: 0.5rem 0.95rem; font-size: 0.825rem; }
+  &.large { padding: 0.9rem 1.45rem; font-size: 1.125rem; }
+  &.expand { width: 100%; }
+
+  // Button Variants/Mods
+  &.secondary {
+    color: $color-black;
+    background: $color-secondary;
+    &:hover { background: darken($color-secondary, 7%); }
+    &.toggled { background: darken($color-secondary, 10%); box-shadow: 0 3px darken($color-secondary, 24%) inset; }
+  }
+  &.success {
+    background: $color-success;
+    &:hover { background: darken($color-success, 7%); }
+    &.toggled { background: darken($color-success, 10%); box-shadow: 0 3px darken($color-success, 24%) inset; }
+  }
+  &.alert {
+    background: $color-alert;
+    &:hover { background: darken($color-alert, 7%); }
+    &.toggled { background: darken($color-alert, 10%); box-shadow: 0 3px darken($color-alert, 24%) inset; }
+  }
+  &.warning {
+    background: $color-warning;
+    &:hover { background: darken($color-warning, 7%); }
+    &.toggled { background: darken($color-warning, 10%); box-shadow: 0 3px darken($color-warning, 24%) inset; }
+  }
+}
+
+.panel {
+  background: $color-secondary;
+  padding: 0.1rem 1.4rem; margin: 1rem 0;
+}
+
+
+// ------ DEFAULT HTML STYLING ------ //
+
+.table { max-width: 100%; overflow-x: auto; }
+table {
+  tr {
+    border-bottom: 1px solid #ddd;
+    th { text-align: left; }
+  }
+  &.expand { width: 100%; }
+}
+
+hr { margin: 2rem 0; border: 0; border-top: 1px solid $color-secondary; }
+
+code, kbd, pre, samp {
+  background: lighten($color-secondary, 5%);
+}
+
+
+// ------ DEBUG ------ //
+
+.debug-responsivity {
+  display: none;
+  @if ( $debug ) { display: block; }
+  .size {
+    position: fixed; bottom: 0; right: 0;
+    background: $text;
+    color: $bg; font-size: 10px; font-weight: 800;
+    padding: 1px 4px;
+    display: none;
+    @include break(xs) {
+      &.xs { display: block; }
+    }
+    @include break(s) {
+      &.xs { display: none; }
+      &.s { display: block; }
+    }
+    @include break(m) {
+      &.xs, &.s { display: none; }
+      &.m { display: block; }
+    }
+    @include break(t) {
+      &.xs, &.s, &.m { display: none; }
+      &.t { display: block; }
+    }
+    @include break(l) {
+      &.xs, &.s, &.m, &.t { display: none; }
+      &.l { display: block; }
+    }
+    @include break(xl) {
+      &.xs, &.s, &.m, &.t, &.l { display: none; }
+      &.xl { display: block; }
+    }
+  }
+}

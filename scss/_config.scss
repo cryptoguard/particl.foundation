@@ -1,0 +1,53 @@
+
+// enable debug mode? (display responsive helper)
+$debug: true;
+
+// ----------------[ TYPOGRAPHY ]---------------- //
+
+$font: "Open Sans", "Helvetica", "Arial", sans-serif !default;
+$line-height: 1.4 !default;
+
+
+// ------------------[ COLORS ]------------------ //
+
+// Text colors
+$text: #202020 !default; // main text color
+$text-hover: darken($text, 30%) !default;
+$text-muted: lighten($text, 30%) !default;
+$text-disabled: lighten($text, 50%) !default;
+
+// Color palette
+$color: #4374b7 !default;
+$color-secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
+$color-success: #98C807 !default; // greens
+$color-alert: #D13814 !default; // reds
+$color-warning: #EF9421 !default; // oranges :)
+$color-white: #fff;
+$color-black: #000;
+
+// Backgrounds
+$bg: #ddd !default; // main bg color
+$bg-muted: darken($bg, 5%) !default;
+$bg-hover: lighten($bg, 20%) !default;
+
+
+// ----------------[ BREAKPOINTS ]--------------- //
+
+// General
+$break-xs: 25rem !default; // small
+$break-s: 30rem !default; // small
+$break-m: 45rem !default; // medium
+$break-t: 52.5rem !default; // tablet
+$break-l: 60rem !default; // large (desktop)
+$break-xl: 75rem !default; // extra-large
+
+
+// ------------------[ LAYOUT ]------------------ //
+
+// Grid
+$row-width: 64rem !default;
+$gutter-width: 1.5rem !default;
+$block-grid-spacing: 0.7rem !default;
+
+// UI
+$border-radius: 4px !default;
