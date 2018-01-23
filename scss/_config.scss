@@ -11,13 +11,13 @@ $line-height: 1.4 !default;
 // ------------------[ COLORS ]------------------ //
 
 // Text colors
-$text: #202020 !default; // main text color
+$text: #212121 !default; // main text color
 $text-hover: darken($text, 30%) !default;
-$text-muted: lighten($text, 30%) !default;
+$text-muted: #858585 !default;
 $text-disabled: lighten($text, 50%) !default;
 
 // Color palette
-$color: #4374b7 !default;
+$color: #02E8AF !default;
 $color-secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
 $color-success: #98C807 !default; // greens
 $color-alert: #D13814 !default; // reds
@@ -26,7 +26,7 @@ $color-white: #fff;
 $color-black: #000;
 
 // Backgrounds
-$bg: #ddd !default; // main bg color
+$bg: #F7F7F7 !default; // main bg color
 $bg-muted: darken($bg, 5%) !default;
 $bg-hover: lighten($bg, 20%) !default;
 
