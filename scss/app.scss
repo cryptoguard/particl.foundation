@@ -149,25 +149,41 @@ hr {
 #footer {
   font-size: 0.8rem;
   text-align: center;
-  padding: 2.6rem 0 1.6rem;
+  padding: 1.6rem 0;
   background: $bg;
   @include break(m) {
-    text-align: left;
-    background: none;
+    padding: 1.6rem 0 4rem;
+  }
+  @include break(l) {
+    background: $color-white;
+    padding: 2.5rem 1.5rem;
   }
   .title {
     font-weight: bold;
     text-transform: uppercase;
     color: darken($text-muted, 5%);
+    display: block;
+    margin-bottom: 0.3rem;
+    @include break(m) {
+      margin: 0 0.7rem 0 0;
+      display: inline-block;
+    }
   }
   p {
     margin-bottom: 1.6rem;
+    @include break(m) {
+      margin: 0.5rem 0;
+    }
   }
   a {
     color: $text-muted;
     &:hover {
       color: $color;
     }
+  }
+  .divider {
+    color: darken($bg, 13%);
+    margin: 0 0.3rem;
   }
 }
 
