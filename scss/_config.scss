@@ -17,7 +17,7 @@ $text-muted: #858585 !default;
 $text-disabled: lighten($text, 50%) !default;
 
 // Color palette
-$color: #02E8AF !default;
+$color: #00E8BD !default;
 $color-secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
 $color-success: #98C807 !default; // greens
 $color-alert: #D13814 !default; // reds
@@ -45,7 +45,7 @@ $break-xl: 75rem !default; // extra-large
 // ------------------[ LAYOUT ]------------------ //
 
 // Grid
-$row-width: 64rem !default;
+$row-width: 70rem !default;
 $gutter-width: 1.5rem !default;
 $block-grid-spacing: 0.7rem !default;
 
