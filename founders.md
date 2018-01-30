@@ -3,6 +3,36 @@ layout: default
 title: Founders
 ---
 
-[Ryno Pieter Mathee](https://www.linkedin.com/in/rmathee/)
-[Nicholas Lawrence Sy](https://www.linkedin.com/in/nick-sy-48a98631/)
-[Guido Scmitz-Krummacher](https://www.linkedin.com/in/guidos1/])
+<ul class="founders small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+
+  <li class="founder">
+    <div class="photo">
+      <a href="https://www.linkedin.com/in/rmathee/" class="link">
+        <img src="{{ "/assets/img/founders/ryno.jpg" | relative_url }}" alt="Ryno Pieter Mathee">
+      </a>
+    </div>
+    <div class="name">Ryno Pieter Mathee</div>
+    <a href="https://www.linkedin.com/in/rmathee/" class="link"><i class="ico ico-linkedin"></i>LinkedIn</a>
+  </li>
+  
+  <li class="founder">
+    <div class="photo">
+      <a href="https://www.linkedin.com/in/nick-sy-48a98631/" class="link">
+        <img src="{{ "/assets/img/founders/nick.jpg" | relative_url }}" alt="Nicholas Lawrence Sy">
+      </a>
+    </div>
+    <div class="name">Nicholas Lawrence Sy</div>
+    <a href="https://www.linkedin.com/in/nick-sy-48a98631/" class="link"><i class="ico ico-linkedin"></i>LinkedIn</a>
+  </li>
+
+  <li class="founder">
+    <div class="photo">
+      <a href="https://www.linkedin.com/in/guidos1/" class="link">
+        <img src="{{ "/assets/img/founders/guido.jpg" | relative_url }}" alt="Guido Scmitz-Krummacher">
+      </a>
+    </div>
+    <div class="name">Guido Scmitz-Krummacher</div>
+    <a href="https://www.linkedin.com/in/guidos1/" class="link"><i class="ico ico-linkedin"></i>LinkedIn</a>
+  </li>
+
+</ul>

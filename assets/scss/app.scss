@@ -189,7 +189,38 @@ hr {
 
 // ------------[  SPECIFIC  ]------------ //
 
-
+.founders {
+  text-align: center;
+  margin-top: 2.5rem;
+  .founder {
+    margin-bottom: 2.5rem;
+    .photo {
+      border-radius: 50%;
+      overflow: hidden;
+      max-width: 200px;
+      margin: 0 auto 1rem;
+      img {
+        display: block;
+      }
+    }
+    .name {
+      color: $text;
+      margin-bottom: 0.3rem;
+    }
+    .link {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      text-decoration: none;
+      color: $text-muted;
+      &:hover {
+        color: darken($color, 5%);
+      }
+      .ico {
+        margin-right: 0.4rem;
+      }
+    }
+  }
+}
 
 
 // ------------[  PLUG-INS  ]------------ //
