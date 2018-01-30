@@ -19,7 +19,15 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://particl.foundation" # the base hostname & protocol for your site, e.g. http://example.com
 
-permalink: /:categories/:year/:month/:title
+permalink: /:categories/:year/:month/:title.html
+
+# Financial statements
+defaults:
+  -
+    scope:
+      path: "assets/financial-statements"
+    values:
+      pdf: true
 
 # Build settings
 markdown: kramdown
