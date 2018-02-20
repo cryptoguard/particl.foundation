@@ -28,10 +28,10 @@ title: Founders
   <li class="founder">
     <div class="photo">
       <a href="https://www.linkedin.com/in/guidos1/" class="link">
-        <img src="{{ "/assets/img/founders/guido.jpg" | relative_url }}" alt="Guido Scmitz-Krummacher">
+        <img src="{{ "/assets/img/founders/guido.jpg" | relative_url }}" alt="Guido Schmitz-Krummacher">
       </a>
     </div>
-    <div class="name">Guido Scmitz-Krummacher</div>
+    <div class="name">Guido Schmitz-Krummacher</div>
     <a href="https://www.linkedin.com/in/guidos1/" class="link"><i class="ico ico-linkedin"></i>LinkedIn</a>
   </li>
 
