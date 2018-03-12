@@ -27,12 +27,12 @@ title: Founders
 
   <li class="founder">
     <div class="photo">
-      <a href="https://www.linkedin.com/in/guidos1/" class="link">
-        <img src="{{ "/assets/img/founders/guido.jpg" | relative_url }}" alt="Guido Schmitz-Krummacher">
+      <a href="https://www.linkedin.com/in/pascal-schmid-4a7303b2/" class="link">
+        <img src="{{ "/assets/img/founders/pascal.jpg" | relative_url }}" alt="Pascal Schmid">
       </a>
     </div>
-    <div class="name">Guido Schmitz-Krummacher</div>
-    <a href="https://www.linkedin.com/in/guidos1/" class="link"><i class="ico ico-linkedin"></i>LinkedIn</a>
+    <div class="name">Pascal Schmid</div>
+    <a href="https://www.linkedin.com/in/pascal-schmid-4a7303b2/" class="link"><i class="ico ico-linkedin"></i>LinkedIn</a>
   </li>
 
 </ul>
