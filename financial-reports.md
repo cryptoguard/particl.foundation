@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Financial Statements
+title: Financial Reports
 ---
 
 Reports to be uploaded via PDF every quarter.
